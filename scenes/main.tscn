@@ -18,3 +18,9 @@ offset_top = 22.0
 offset_right = 81.0
 offset_bottom = 45.0
 text = "Loading"
+
+[node name="ItemList" type="ItemList" parent="."]
+offset_left = 54.0
+offset_top = 127.0
+offset_right = 1100.0
+offset_bottom = 605.0
