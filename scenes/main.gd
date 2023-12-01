@@ -5,6 +5,7 @@ var server := ENetMultiplayerPeer.new()
 func _ready():
 	var error = server.create_server(7070)
 	if error != OK: print("ERROR CODE: ", error)
+	multiplayer.multiplayer_peer = server
 
 func _process(delta):
 	var status = server.get_connection_status()
@@ -15,3 +16,4 @@ func _process(delta):
 	
 	var peers = server.get_host().get_peers()
 	$Clients.text = "Clients: " + str(len(peers)) + " => " + str(peers)
+
