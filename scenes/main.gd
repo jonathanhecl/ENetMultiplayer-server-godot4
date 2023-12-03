@@ -27,12 +27,12 @@ func _process(delta):
 	var peers = peer.get_host().get_peers()
 	$Clients.text = "Clients: " + str(len(peers)) + " => " + str(peers)
 
-@rpc("any_peer")
-func send_message_to_server(message: String):
-	print("send_message_to_server: ", message)
-	if multiplayer.is_server():
-		send_message_to_client.rpc(message)
-
-@rpc("authority")
-func send_message_to_client(message: String):
-	print("send_message_to_client", message)
+#@rpc("any_peer")
+#func send_message_to_server(message: String):
+	#print("send_message_to_server: ", message)
+	#if multiplayer.is_server():
+		#send_message_to_client.rpc(message)
+#
+#@rpc("authority")
+#func send_message_to_client(message: String):
+	#print("send_message_to_client", message)
